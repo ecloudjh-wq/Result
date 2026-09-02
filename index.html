@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reading Live 결과 화면 확인 안내</title>
+<title>Reading Series Result 가이드</title>
 <style>
 :root {
   --bg:#f5f7f9;
@@ -96,81 +96,6 @@ a{color:inherit;text-decoration:none}
 .notice-card.exclude{background:var(--exclude-bg);border-color:var(--exclude-line)}
 .notice-card.exclude strong{color:#9a4d0b}
 
-.apk-card{
-  margin-top:16px;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 210px;
-  gap:28px;
-  align-items:center;
-  background:linear-gradient(135deg,#f7ffff 0%,#ffffff 58%);
-  border:1px solid #cfe9e9;
-  border-radius:18px;
-  padding:24px 26px;
-}
-.apk-eyebrow{
-  display:inline-block;
-  margin-bottom:7px;
-  color:var(--accent-dark);
-  font-size:14px;
-  font-weight:850;
-  letter-spacing:.06em;
-}
-.apk-card h3{
-  margin:0 0 8px;
-  color:var(--text);
-  font-size:24px;
-  letter-spacing:-.025em;
-}
-.apk-card p{
-  margin:0;
-  color:var(--sub);
-  font-size:18px;
-  line-height:1.7;
-}
-.apk-steps{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:16px;
-}
-.apk-step{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  padding:7px 10px;
-  border:1px solid #dce8e8;
-  border-radius:9px;
-  background:#fff;
-  color:#475467;
-  font-size:16px;
-  font-weight:750;
-}
-.apk-step b{
-  color:var(--accent-dark);
-  font-size:14px;
-}
-.apk-qr{
-  justify-self:end;
-  width:220px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:12px;
-  box-shadow:0 8px 24px rgba(16,24,40,.07);
-}
-.apk-qr img{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:7px;
-}
-.apk-qr-label{
-  margin-top:9px;
-  text-align:center;
-  color:var(--sub);
-  font-size:14px;
-  font-weight:750;
-}
 
 .exclusion-table{
   margin-top:16px; border:1px solid var(--exclude-line); border-radius:14px; overflow:hidden;
@@ -222,99 +147,46 @@ a{color:inherit;text-decoration:none}
 .check-list li{position:relative;padding-left:18px;color:var(--sub);font-size:17px;line-height:1.65}
 .check-list li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
-.feedback-card{
-  margin-top:24px;
-  padding:30px 32px;
-  border:1px solid #cfe9e9;
-  border-radius:22px;
-  background:linear-gradient(135deg,#f4ffff 0%,#ffffff 72%);
-  box-shadow:var(--shadow);
-  text-align:center;
-  scroll-margin-top:92px;
-}
-.feedback-card h2{margin:0 0 10px;font-size:29px;letter-spacing:-.035em}
-.feedback-card p{margin:0 auto;color:var(--sub);font-size:18px;line-height:1.75;max-width:760px}
-.feedback-btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  min-height:58px;margin-top:20px;padding:0 28px;
-  border-radius:12px;background:var(--accent-dark);color:#fff;
-  font-size:19px;font-weight:850;box-shadow:0 8px 20px rgba(22,143,146,.18);
-  transition:.15s ease;
-}
-.feedback-btn:hover{background:#117b7e;transform:translateY(-1px)}
-
-.footer{padding:30px 0 4px;text-align:center;color:var(--muted);font-size:14px}
-@media(max-width:980px){
-  .layout{grid-template-columns:1fr;padding:20px 16px 50px}
-  .sidebar{position:relative;top:0;display:block;overflow-x:auto;white-space:nowrap}
-  .side-label{display:none} .side-nav{flex-direction:row} .side-nav a{display:inline-block}
-  .hero{padding:32px 26px} .notice,.notes{grid-template-columns:1fr}
-  .apk-card{grid-template-columns:1fr}
-  .apk-qr{justify-self:start}
-}
 @media(max-width:640px){
   .header-inner{padding:0 16px} .header-meta{display:none}
   .hero h1{font-size:33px} .hero p{font-size:18px} .section{padding:24px 18px}
   .section-head{align-items:flex-start;flex-direction:column}
   .ex-row{grid-template-columns:100px 1fr;gap:5px}
   .ex-row > :last-child{grid-column:2}
-  .apk-card{padding:20px}
-  .apk-qr{width:190px}
 }
 </style>
 </head>
 <body>
 <header class="header">
   <div class="header-inner">
-    <div class="brand">엘리아영어 <span>Reading Live</span></div>
-    <div class="header-meta">결과 화면 확인 안내</div>
+    <div class="brand">엘리아영어 <span>Reading Series</span></div>
+    <div class="header-meta">Result 가이드</div>
   </div>
 </header>
 
 <div class="layout">
   <aside class="sidebar">
-    <div class="side-label">화면 확인</div>
+    <div class="side-label">Result 안내</div>
     <nav class="side-nav">
-      <a href="#overview" class="active">확인 안내</a>
+      <a href="#overview" class="active">이용 안내</a>
       <a href="#listen">Listen Up 결과</a>
       <a href="#read">Read On 결과</a>
       <a href="#speak">Speak Out 결과</a>
-      <a href="#feedback">문제 보내기</a>
     </nav>
   </aside>
 
   <main class="content">
     <section class="hero" id="overview">
       <div class="kicker">READING LIVE RESULT</div>
-      <h1>Reading Live 결과 화면 확인 안내</h1>
-      <p>
-        Reading Live 학습이 끝난 뒤 나오는 결과 화면을 확인해 주세요.
-        Listen Up, Read On, Speak Out의 각 항목이 화면에 잘 보이고 학습 결과가 정상적으로 표시되는지 살펴봐 주세요.
-      </p>
+      <h1>Reading Series Result 가이드</h1>
+      <p>Reading Live 학습을 마치면 학습 단계에 따라 Listen Up, Read On, Speak Out 결과 화면이 제공됩니다. 각 화면에서 학습한 내용과 주요 결과를 확인할 수 있습니다.</p>
 
       <div class="notice">
         <div class="notice-card">
-          <strong>확인 방법</strong>
-          <p>Listen Up, Read On, Speak Out 학습을 끝까지 진행한 뒤 각 결과 화면을 열어 주세요. 글자와 숫자, 학습 결과가 화면에 잘 보이는지 확인해 주세요.</p>
+          <strong>결과 화면 보는 방법</strong>
+          <p>각 학습을 완료하면 해당 학습의 결과 화면이 나타납니다. Listen Up에서는 듣기 학습 내용, Read On에서는 읽기 결과, Speak Out에서는 말하기 결과와 Unit 전체 학습 내용을 확인할 수 있습니다.</p>
         </div>
       </div>
-
-
-      <div class="apk-card">
-        <div>
-          <span class="apk-eyebrow">테스트용 앱</span>
-          <h3>Reading Live 테스트용 앱 설치</h3>
-          <p>오른쪽 QR 코드를 태블릿 카메라로 찍어 주세요. 열린 화면에서 설치 파일을 받은 뒤 앱을 설치해 주세요. 설치가 끝나면 Reading Live를 실행해 결과 화면을 확인해 주세요.</p>
-          <div class="apk-steps">
-            <span class="apk-step"><b>01</b> QR 코드 찍기</span>
-            <span class="apk-step"><b>02</b> 설치 파일 받기</span>
-            <span class="apk-step"><b>03</b> 앱 설치 후 화면 확인</span>
-          </div>
-        </div>
-        <div class="apk-qr">
-          <img src="data:image/png;base64,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" alt="Reading Live UAT APK 공유 QR 코드">
-          <div class="apk-qr-label">테스트용 앱 설치 QR</div>
-        </div>
       </div>
     </section>
 
@@ -323,7 +195,7 @@ a{color:inherit;text-decoration:none}
         <div class="section-title-wrap">
           <small>01</small>
           <h2>Listen Up 결과 화면</h2>
-          <p class="section-desc">Listen Up 학습을 마치면 나오는 결과 화면입니다.</p>
+          <p class="section-desc">Listen Up 학습 후 들은 내용과 주요 학습 정보를 확인하는 화면입니다.</p>
         </div>
       </div>
 
@@ -333,12 +205,11 @@ a{color:inherit;text-decoration:none}
 
       <div class="notes">
         <div class="note">
-          <strong>확인할 내용</strong>
+          <strong>이 화면에서 확인할 수 있어요</strong>
           <ul class="check-list">
-            <li>Learning Time(학습 시간), Genre(장르), Sentences Heard(들은 문장 수)가 화면에 보이는지</li>
-            <li>Today's Story(오늘의 이야기)가 정상적으로 보이는지</li>
-            <li>New Words(새로 배운 단어)와 Today's Sentence(오늘의 문장)가 화면에 보이는지</li>
-            <li>Story Badge(스토리 배지)가 화면에 보이는지</li>
+            <li>학습 시간, 스토리 장르, 들은 문장 수</li>
+            <li>오늘 학습한 스토리와 새로 배운 단어</li>
+            <li>오늘의 주요 문장과 Story Badge 상태</li>
           </ul>
         </div>
       </div>
@@ -349,7 +220,7 @@ a{color:inherit;text-decoration:none}
         <div class="section-title-wrap">
           <small>02</small>
           <h2>Read On 결과 화면</h2>
-          <p class="section-desc">Read On 학습을 마치면 나오는 결과 화면입니다.</p>
+          <p class="section-desc">Read On 학습 후 읽기 점수와 읽기 능력, 모은 단어와 배지를 확인하는 화면입니다.</p>
         </div>
       </div>
 
@@ -359,11 +230,12 @@ a{color:inherit;text-decoration:none}
 
       <div class="notes">
         <div class="note">
-          <strong>확인할 내용</strong>
+          <strong>이 화면에서 확인할 수 있어요</strong>
           <ul class="check-list">
-            <li>Learning Time(학습 시간), Spoken Words(말한 단어 수), Reading Score(읽기 점수), Sentences Read(읽은 문장 수)가 화면에 보이는지</li>
-            <li>Accuracy(정확도), Fluency(유창성), Comprehension(내용 이해)이 표시되는지</li>
-            <li>Word Collection(모은 단어), My Reading Shelf(읽기 책장), Story Badge(스토리 배지)가 화면에 보이는지</li>
+            <li>학습 시간, 말한 단어 수, 읽기 점수, 읽은 문장 수</li>
+            <li>Accuracy(정확도), Fluency(유창성), Comprehension(내용 이해) 결과</li>
+            <li>모은 단어, My Reading Shelf(읽기 책장), Story Badge</li>
+            <li>Story Badge는 Read On 학습을 완료하고 Reading Score가 70% 이상이면 획득할 수 있습니다.</li>
           </ul>
         </div>
       </div>
@@ -374,7 +246,7 @@ a{color:inherit;text-decoration:none}
         <div class="section-title-wrap">
           <small>03</small>
           <h2>Speak Out 결과 화면</h2>
-          <p class="section-desc">Speak Out 학습을 마치면 나오는 결과 화면입니다.</p>
+          <p class="section-desc">Speak Out 학습 후 말하기 결과와 해당 Unit의 전체 학습 내용을 확인하는 화면입니다.</p>
         </div>
       </div>
 
@@ -384,24 +256,16 @@ a{color:inherit;text-decoration:none}
 
       <div class="notes">
         <div class="note">
-          <strong>확인할 내용</strong>
+          <strong>이 화면에서 확인할 수 있어요</strong>
           <ul class="check-list">
-            <li>Learning Time(학습 시간), Spoken Words(말한 단어 수), Speaking Score(말하기 점수), Sentences Heard(들은 문장 수)가 화면에 보이는지</li>
-            <li>My Speaking Skills(말하기 결과)가 화면에 보이는지</li>
-            <li>Bonus Words(보너스 단어)와 Unit Summary(Unit 전체 결과)가 화면에 보이는지</li>
+            <li>학습 시간, 말한 단어 수, 말하기 점수, 들은 문장 수</li>
+            <li>My Speaking Skills에서 말하기와 참여 결과</li>
+            <li>Bonus Words와 Unit Summary에서 해당 Unit의 전체 학습 결과</li>
           </ul>
         </div>
       </div>
     </section>
-
-
-    <section class="feedback-card" id="feedback">
-      <h2>확인 중 문제가 있으면 알려주세요</h2>
-      <p>화면을 확인하다가 이상한 부분이 보이면 아래 버튼을 눌러 내용을 보내 주세요. 문제가 보이는 화면을 함께 올려주시면 확인하는 데 도움이 됩니다.</p>
-      <a class="feedback-btn" href="https://forms.gle/2pwBxJYfy54mHQrk6" target="_blank" rel="noopener noreferrer">문제 내용 보내기</a>
-    </section>
-
-    <div class="footer">Reading Live · 결과 화면 확인 안내</div>
+<div class="footer">Reading Series · Result 가이드</div>
   </main>
 </div>
 
